@@ -1,2 +1,0 @@
-# Khan-Academy
-Codigos
