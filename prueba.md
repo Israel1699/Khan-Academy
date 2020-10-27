@@ -1,1 +1,0 @@
-Rola es gay  xD
