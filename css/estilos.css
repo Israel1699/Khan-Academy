@@ -1,89 +1,355 @@
+@font-face {
+  font-family: chata;
+  src: url(chata.ttf);
+}
+
+@font-face {
+  font-family: coffee;
+  src: url(coffe.ttf);
+}
+@font-face {
+  font-family: thinly;
+  src: url(thinly.otf);
+}
+
 body{
-  font-family: verdana;
-  font-size: 16px;
-  margin:0 auto;
-  width: 950px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1em;
 }
-
 header{
-  width: 950px;
-  height: 150px;
-  border: 1px solid grey;
-  background-color: orange;
-  vertical-align: baseline;
-  text-align: center;
-  padding-top: 45px 0px 0px 0px;
-
-}
-header h1{
-  text-align: center;
-  color: white;
-}
-nav{
-  margin-top: 5px;
-  border: 1px solid grey;
-  padding: 16px;
-}
-
-nav a{
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  border: 1px solid blue;
-  padding: 16px 4px 16px 4px;
-}
-nav a:hover{
-  background-color: grey;
-  color: white;
-}
-#contenedor{
-  border: 1px solid grey;
-  box-shadow: 0 0 16px grey;
-  background-color: orange;
-  margin: 5px;
-  padding: 16px;
-}
-
-#contenedor p{
-  text-align: justify;
-}
-
-#contenedor img{
-  width: 904px;
-}
-#Nota_Primaria {
-  margin-bottom: 5px;
-}
-
-#separador{
-  border: 1px dotted black;
-}
-
-#Nota_Secundaria {
-  margin-bottom: 5px;
-  height: 385px;
-}
-.Galeria {
-  width: 280px;
+  width: 100%;
+  height: 45px;
   padding: 10px;
+  background-color:#BDBDBD;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 600;
+}
+ header img{
+   width: 45px;
+   height: 45px;
+   float: left;
+ }
+
+header h1{
+  color: #303F9F;
+  font-family: thinly;
+  width: 140px;
   float: left;
-}
-#Nota_Secundaria article img{
-  width: 285px;
-  height: 290px;
-}
-#Nota_Secundaria a{
-  color:white;
-  text-decoration: none;
-  font-weight: bold;
+  margin: 0px;
+  padding-left: 10px;
 }
 
-#Nota_Secundaria a:hover{
-  background-color: #f9f9f9;
-  color: grey;
-  border-radius: 10px;
+header nav{
+  width: 400px;
+  height: inherit;
+  float: right;
+  margin: 0px;
+  padding: 0px;
 }
- .redes {
-   float: right;
-  width: 80px;
+nav ul li{
+  list-style-type: none;
+  float: left;
+  display: inline;
+}
+
+#menu a{
+  margin-right: 10px;
+  text-decoration: none;
+  font-family: thinly;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #303F9F;
+}
+
+#menu a:hover{
+  color: white;
+  transition: .8s;
+}
+#portada{
+  width: 100%;
+  height: 718px;
+}
+
+#portada img{
+  width: 100%;
+  height: 718px;
+}
+#portada .caratula{
+  width: 100%;
+  height: 654px;
+  background-color: #689F38;
+  position: absolute;
+  z-index: 200;
+  top: 65px;
+  opacity: 0.5;
+}
+
+#titulo{
+  font-family:thinly;
+  font-size: 2.5em;
+  color: white;
+  position: absolute;
+  top: 45px;
+  left: 550px;
+  z-index: 400;
+  text-shadow: 5px 5px 10px black;
+}
+
+#generacion{
+  font-family:thinly;
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  top: 110px;
+  left: 600px;
+  z-index: 400;
+  text-shadow: 5px 5px 10px black;
+}
+
+#mensaje{
+  font-family:chata;
+  position: absolute;
+  font-size: 1.5em;
+  color: black;
+  top: 535px;
+  left: 250px;
+  z-index: 400;
+  text-shadow: 2px 2px 5px white;
+  font-weight: bold;
+  text-align: center;
+  width: 70%;
+}
+
+#grupo{
+  width: 100%;
+  height: 718px;
+  }
+  #grupo img{
+    width: 100%;
+    height: 718px;
+  }
+
+#lis{
+  width: 100%;
+  height: 718px;
+}
+#lis img{
+  width: 100%;
+  height: 718px;
+}
+ #niñ{
+  width: 100%;
+  height: 718px;
+}
+#niñ img{
+ width: 100%;
+ height: 718px;
+}
+
+#niño{
+  width: 100%;
+  height: 718px;
+}
+#niño img{
+  width: 100%;
+  height: 718px;
+}
+
+#solo{
+  width: 100%;
+  height: 718px;
+}
+
+#solo img{
+  width: 100%;
+  height: 718px;
+}
+
+  #bajar{
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 660px;
+  left: 750px;
+  z-index: 400;
+}
+
+
+.contenedor-izq{
+width: 550px;
+height: 300px;
+background-color: #689F38;
+position: absolute;
+top: 860px;
+left: -535px;
+box-shadow: 5px 5px 15px #BDBDBD;
+border: 1px solid #BDBDBD;
+z-index: 400;
+padding-left: 15px;
+}
+.contenedor-izq:hover{
+  transition: 0.8s;
+  transform: translate(535px);
+}
+
+.contenedor-mensaje{
+  width: 90%;
+  height: 70%,
+}
+
+.mensaje-contenedor{
+width: 100%;
+height: 100%;
+text-align: justify;
+}
+
+#grupo .siguiente{
+  width: 45px;
+  height: 45px;
+  position:absolute;
+  top:120px;
+  left:525px;
+}
+
+
+.contenedor-der{
+width: 550px;
+height: 230px;
+background-color: #689F38;
+position: absolute;
+top: 1900px;
+left: 1545px;
+box-shadow: 5px 5px 15px #BDBDBD;
+border: 1px solid #BDBDBD;
+z-index: 400;
+padding-left: 15px;
+}
+.contenedor-der:hover{
+  transition: 0.8s;
+  transform: translate(-530px);
+}
+
+.cont-mensaje{
+  width: 90%;
+  height: 60%;
+  margin: 30px;
+}
+
+.mensaje-cont{
+width: 100%;
+height: 80%;
+text-align: justify;
+
+}
+
+#lis .regresar{
+  width: 45px;
+  height: 45px;
+  position:absolute;
+  top:95px;
+  left:-5px;
+}
+
+
+
+
+
+.contenedor-izq2{
+width: 550px;
+height: 300px;
+background-color: #689F38;
+position: absolute;
+top: 2500px;
+left: -535px;
+box-shadow: 5px 5px 15px #BDBDBD;
+border: 1px solid #BDBDBD;
+z-index: 400;
+padding-left: 15px;
+}
+.contenedor-izq2:hover{
+  transition: 0.8s;
+  transform: translate(530px);
+}
+
+#solo .siguiente2{
+  width: 45px;
+  height: 45px;
+  position:absolute;
+  top:120px;
+  left:525px;
+}
+
+
+
+
+
+
+.contenedor-der2{
+width: 550px;
+height: 230px;
+background-color: #689F38;
+position: absolute;
+top: 3300px;
+left: 1545px;
+box-shadow: 5px 5px 15px #BDBDBD;
+border: 1px solid #BDBDBD;
+z-index: 400;
+padding-left: 15px;
+}
+.contenedor-der2:hover{
+  transition: 0.8s;
+  transform: translate(-530px);
+}
+
+.cont2-mensaje{
+  width: 90%;
+  height: 60%;
+  margin: 30px;
+}
+
+.mensaje-cont2{
+width: 100%;
+height: 80%;
+text-align: justify;
+
+}
+
+#niñ .regresar2{
+  width: 45px;
+  height: 45px;
+  position:absolute;
+  top:95px;
+  left:-5px;
+}
+
+
+
+
+
+.contenedor-izq3{
+width: 550px;
+height: 300px;
+background-color: #689F38;
+position: absolute;
+top: 3980px;
+left: -535px;
+box-shadow: 5px 5px 15px #BDBDBD;
+border: 1px solid #BDBDBD;
+z-index: 400;
+padding-left: 15px;
+}
+.contenedor-izq3:hover{
+  transition: 0.8s;
+  transform: translate(530px);
+}
+
+#niño .siguiente3{
+  width: 45px;
+  height: 45px;
+  position:absolute;
+  top:120px;
+  left:525px;
 }
