@@ -33,14 +33,14 @@ header{
    float: left;
  }
 
-/*header h1{
+header h1{
   color: #303F9F;
   font-family: thinly;
   width: 140px;
   float: left;
   margin: 0px;
   padding-left: 10px;
-}*/
+}
 
 header nav{
   width: 400px;
