@@ -1,0 +1,89 @@
+body{
+  font-family: verdana;
+  font-size: 16px;
+  margin:0 auto;
+  width: 950px;
+}
+
+header{
+  width: 950px;
+  height: 150px;
+  border: 1px solid grey;
+  background-color: orange;
+  vertical-align: baseline;
+  text-align: center;
+  padding-top: 45px 0px 0px 0px;
+
+}
+header h1{
+  text-align: center;
+  color: white;
+}
+nav{
+  margin-top: 5px;
+  border: 1px solid grey;
+  padding: 16px;
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: 1px solid blue;
+  padding: 16px 4px 16px 4px;
+}
+nav a:hover{
+  background-color: grey;
+  color: white;
+}
+#contenedor{
+  border: 1px solid grey;
+  box-shadow: 0 0 16px grey;
+  background-color: orange;
+  margin: 5px;
+  padding: 16px;
+}
+
+#contenedor p{
+  text-align: justify;
+}
+
+#contenedor img{
+  width: 904px;
+}
+#Nota_Primaria {
+  margin-bottom: 5px;
+}
+
+#separador{
+  border: 1px dotted black;
+}
+
+#Nota_Secundaria {
+  margin-bottom: 5px;
+  height: 385px;
+}
+.Galeria {
+  width: 280px;
+  padding: 10px;
+  float: left;
+}
+#Nota_Secundaria article img{
+  width: 285px;
+  height: 290px;
+}
+#Nota_Secundaria a{
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#Nota_Secundaria a:hover{
+  background-color: #f9f9f9;
+  color: grey;
+  border-radius: 10px;
+}
+ .redes {
+   float: right;
+  width: 80px;
+}
