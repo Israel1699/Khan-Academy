@@ -57,6 +57,18 @@ nav ul li{
   float: left;
   display: inline;
 }
+#portadaimg{
+  width: 100%;
+  height: 625px;
+}
+#bajar{
+width: 45px;
+height: 45px;
+position: absolute;
+top: 550px;
+left: 50%;
+z-index: 400;
+}
 
 #menu a{
   margin-right: 10px;
@@ -71,114 +83,88 @@ nav ul li{
   color: white;
   transition: .8s;
 }
-#portada{
+section img{
   width: 100%;
-  height: 718px;
+  height: 625px;
 }
 
-#portada img{
-  width: 100%;
-  height: 718px;
-}
-#portada .caratula{
-  width: 100%;
-  height: 654px;
-  background-color: #689F38;
-  position: absolute;
-  z-index: 200;
-  top: 65px;
-  opacity: 0.5;
-}
-
-#titulo{
+#nombre{
   font-family:thinly;
   text-align: center;
   font-size: 2.5em;
   color: white;
   position:absolute;
   top: 45px;
-  left: 350px;
+  left: 400px;
   z-index: 400;
   text-shadow: 5px 5px 10px black;
 }
 
-#nombre{
+#titulo{
   font-family:thinly;
   position: absolute;
   font-size: 2em;
   color: white;
   top: 110px;
-  left: 500px;
+  left: 350px;
   z-index: 400;
   text-shadow: 5px 5px 10px black;
 }
 
 #mensaje{
-  font-family:chata;
+  font-family:thinly;
   position: absolute;
-  font-size: 1.5em;
-  color: black;
-  top: 535px;
+  font-size: 1.8em;
+  color: white;
+  top: 400px;
   left: 250px;
   z-index: 400;
-  text-shadow: 2px 2px 5px white;
+  text-shadow: 2px 2px 5px blue;
   font-weight: bold;
   text-align: center;
   width: 70%;
 }
 
-#codigo{
-  width: 100%;
-  height: 718px;
-  }
-  #codigo img{
-    width: 100%;
-    height: 718px;
-  }
-
-#galeria{
-  width: 100%;
-  height: 718px;
+#TEXT{
+  font-family: thinly;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  position:absolute;
+  top: 630px;
+  left: 48%;
+  text-shadow: 5px 5px 10px black;
 }
-#galeria img{
-  width: 100%;
-  height: 718px;
+#codigos1 {
+  font-family: thinly;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  position:absolute;
+  top: 690px;
+  left: 450px;
+  text-shadow: 5px 5px 10px black;
 }
- #contacto{
-  width: 100%;
-  height: 718px;
-}
-#contacto img{
- width: 100%;
- height: 718px;
-}
-
-#solo{
-  width: 100%;
-  height: 718px;
-}
-
-#solo img{
-  width: 100%;
-  height: 718px;
-}
-
-  #bajar{
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  top: 660px;
+#codigos2{
+  font-family: thinly;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  position:absolute;
+  top: 690px;
   left: 750px;
-  z-index: 400;
+  text-shadow: 5px 5px 10px black;
 }
-
+#codigo a{
+color: white;
+}
 
 .contenedor-izq{
 width: 550px;
 height: 300px;
-background-color: #689F38;
+background-color: #57A4B5;
 position: absolute;
-top: 860px;
+top: 1400px;
 left: -535px;
 box-shadow: 5px 5px 15px #BDBDBD;
 border: 1px solid #BDBDBD;
@@ -201,7 +187,7 @@ height: 100%;
 text-align: justify;
 }
 
-#grupo .siguiente{
+.siguiente{
   width: 45px;
   height: 45px;
   position:absolute;
@@ -210,35 +196,6 @@ text-align: justify;
 }
 
 
-.contenedor-der{
-width: 550px;
-height: 230px;
-background-color: #689F38;
-position: absolute;
-top: 1900px;
-left: 1545px;
-box-shadow: 5px 5px 15px #BDBDBD;
-border: 1px solid #BDBDBD;
-z-index: 400;
-padding-left: 15px;
-}
-.contenedor-der:hover{
-  transition: 0.8s;
-  transform: translate(-530px);
-}
-
-.cont-mensaje{
-  width: 90%;
-  height: 60%;
-  margin: 30px;
-}
-
-.mensaje-cont{
-width: 100%;
-height: 80%;
-text-align: justify;
-
-}
 
 #lis .regresar{
   width: 45px;
@@ -247,100 +204,45 @@ text-align: justify;
   top:95px;
   left:-5px;
 }
-
-
-
-
-
-.contenedor-izq2{
-width: 550px;
-height: 300px;
-background-color: #689F38;
-position: absolute;
-top: 2500px;
-left: -535px;
-box-shadow: 5px 5px 15px #BDBDBD;
-border: 1px solid #BDBDBD;
-z-index: 400;
-padding-left: 15px;
-}
-.contenedor-izq2:hover{
-  transition: 0.8s;
-  transform: translate(530px);
-}
-
-#solo .siguiente2{
-  width: 45px;
-  height: 45px;
+#Cont{
   position:absolute;
-  top:120px;
-  left:525px;
 }
-
-
-
-
-
-
-.contenedor-der2{
-width: 550px;
-height: 230px;
-background-color: #689F38;
-position: absolute;
-top: 3300px;
-left: 1545px;
-box-shadow: 5px 5px 15px #BDBDBD;
-border: 1px solid #BDBDBD;
-z-index: 400;
-padding-left: 15px;
+#rot{
+  width: 100%;
+  height: 625px;
 }
-.contenedor-der2:hover{
-  transition: 0.8s;
-  transform: translate(-530px);
-}
-
-.cont2-mensaje{
-  width: 90%;
-  height: 60%;
-  margin: 30px;
-}
-
-.mensaje-cont2{
-width: 100%;
-height: 80%;
-text-align: justify;
-
-}
-
-#Contacto .regresar2{
-  width: 45px;
-  height: 45px;
+#galee{
+  font-family: thinly;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
   position:absolute;
-  top:95px;
-  left:-5px;
+  top: 1270px;
+  left: 48%;
+  text-shadow: 5px 5px 10px black;
 }
-
-
-
-
-
-.contenedor-izq3{
-width: 550px;
-height: 300px;
-background-color: #689F38;
-position: absolute;
-top: 3980px;
-left: -535px;
-box-shadow: 5px 5px 15px #BDBDBD;
-border: 1px solid #BDBDBD;
-z-index: 400;
-padding-left: 15px;
+#s1{
+  font-family: thinly;
+  text-align: center;
+  font-size: 1.5em;
+  top: 1900px;
+  left: 18%;
+  color: white;
+  position:absolute;
+  text-shadow: 5px 5px 10px black;
 }
-.contenedor-izq3:hover{
-  transition: 0.8s;
-  transform: translate(530px);
+#s2{
+  font-family: thinly;
+  text-align: center;
+  font-size: 1.5em;
+  top: 2700px;
+  left: 45%;
+  color: white;
+  position:absolute;
+  text-shadow: 5px 5px 10px black;
 }
-footer img{
+a img{
+
   width: 50px;
   height: 50px;
 }
