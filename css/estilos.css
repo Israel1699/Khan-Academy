@@ -1,3 +1,27 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+/*.home{
+  display: flex;
+  flex-wrap:
+}
+.in-flex{
+  flex: 1;
+  min-width: 250px;
+}
+.in-flex:first-child{
+  flex: 2;
+  padding: 25px;
+  background-color: #fff;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+in-flex div{
+  padding: 25px;
+  background-color: #fff;
+  margin: 20px;
+}*/
 @font-face {
   font-family: chata;
   src: url(chata.ttf);
@@ -24,7 +48,7 @@ header{
   padding: 10px;
   background-color:#BDBDBD;
   position: fixed;
-  top: 0;
+  top: 0px;
   overflow: hidden;
   z-index: 600;
 }
@@ -47,15 +71,11 @@ header h1{
 }
 
 header nav{
-  width: 400px;
-  height: inherit;
   float: right;
-  margin: 0px;
-  padding: 0px;
+  padding-top: 13px;
+  padding-right: 10px;
 }
 nav ul li{
-  list-style-type: none;
-  float: left;
   display: inline;
 }
 #portadaimg{
@@ -75,7 +95,7 @@ z-index: 400;
   margin-right: 10px;
   text-decoration: none;
   font-family: thinly;
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
   color: #303F9F;
 }
@@ -95,7 +115,7 @@ section img{
   font-size: 2.5em;
   color: white;
   position:absolute;
-  top: 45px;
+  top: 75px;
   left: 35%;
   z-index: 400;
   text-shadow: 5px 5px 10px black;
@@ -106,7 +126,7 @@ section img{
   position: absolute;
   font-size: 2em;
   color: white;
-  top: 110px;
+  top: 130px;
   left: 28%;
   z-index: 400;
   text-shadow: 5px 5px 10px black;
@@ -125,14 +145,14 @@ section img{
   text-align: center;
   width: 70%;
 }
-
+/* Esta parte pertenece a la seccion de Codigos*/
 #TEXT{
   font-family: thinly;
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
   color: white;
   position:absolute;
-  top: 700px;
+  top: 80px;
   left: 48%;
   text-shadow: 5px 5px 10px black;
 }
@@ -142,8 +162,8 @@ section img{
   font-size: 1.5em;
   color: white;
   position:absolute;
-  top: 750px;
-  left: 34%;
+  top: 150px;
+  left: 36%;
   text-shadow: 5px 5px 10px black;
 }
 #codigos2{
@@ -152,20 +172,31 @@ section img{
   font-size: 1.5em;
   color: white;
   position:absolute;
-  top: 750px;
-  left: 56%;
+  top: 150px;
+  left: 60%;
   text-shadow: 5px 5px 10px black;
 }
 #codigo a{
 color: white;
 }
-
+/* termina la seccion de "Codigos" */
+/* Esta parte pertenece a la seccion de "Galeria" */
+#galee{
+  font-family: thinly;
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  position:absolute;
+  top: 100px;
+  left: 47%;
+  text-shadow: 5px 5px 10px black;
+}
 .contenedor-izq{
 width: 550px;
 height: 300px;
 background-color: #57A4B5;
 position: absolute;
-top: 1400px;
+top: 250px;
 left: -535px;
 box-shadow: 5px 5px 15px #BDBDBD;
 border: 1px solid #BDBDBD;
@@ -195,31 +226,16 @@ text-align: justify;
   top:120px;
   left:93.5%;
 }
+/* Termina la seccion de "Galeria" */
 
-
-
-#lis .regresar{
-  width: 45px;
-  height: 45px;
-  position:absolute;
-  top:95px;
-  left:-5px;
-}
-
-#galee{
-  font-family: thinly;
-  text-align: center;
-  font-size: 2em;
-  color: white;
-  position:absolute;
-  top: 1320px;
-  left: 48%;
-  text-shadow: 5px 5px 10px black;
-}
+/* Esta es la seccion de "Escribeme" */
 input{
-  border-radius: 15px;
+  padding: 3px;
+  border-radius: 10px;
 }
 #s1{
+  margin: 10px;
+  padding: 20px;
   font-family: thinly;
   text-align: center;
   font-size: 1.5em;
@@ -235,7 +251,7 @@ footer h2{
   font-family: thinly;
   color: white;
   font-size: 2em;
-  top: 2580px;
+  top: 2590px;
   left: 45%;
 }
 #s2{
@@ -243,10 +259,11 @@ footer h2{
   border-style: solid;
   text-align: center;
   background-color: white;
-  padding-right: 50px;
+  padding-right: 45px;
+  padding-left: 30px;
   font-size: 1.5em;
   top: 2700px;
-  left: 34%;
+  left: 33%;
   color: black;
   position:absolute;
   text-shadow: 5px 5px 10px black;
