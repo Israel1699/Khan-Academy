@@ -29,6 +29,7 @@ header{
   z-index: 600;
 }
  header img{
+   border-radius: 15px;
    margin: 5px;
    margin-top: 0px;
    width: 45px;
@@ -41,7 +42,7 @@ header h1{
   font-family: thinly;
   width: 375px;
   float: left;
-  margin: 0px;
+  margin: 5px;
   padding-left: 10px;
 }
 
@@ -95,7 +96,7 @@ section img{
   color: white;
   position:absolute;
   top: 45px;
-  left: 400px;
+  left: 35%;
   z-index: 400;
   text-shadow: 5px 5px 10px black;
 }
@@ -106,7 +107,7 @@ section img{
   font-size: 2em;
   color: white;
   top: 110px;
-  left: 350px;
+  left: 28%;
   z-index: 400;
   text-shadow: 5px 5px 10px black;
 }
@@ -117,7 +118,7 @@ section img{
   font-size: 1.8em;
   color: white;
   top: 400px;
-  left: 250px;
+  left: 18%;
   z-index: 400;
   text-shadow: 2px 2px 5px blue;
   font-weight: bold;
@@ -128,10 +129,10 @@ section img{
 #TEXT{
   font-family: thinly;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   color: white;
   position:absolute;
-  top: 630px;
+  top: 700px;
   left: 48%;
   text-shadow: 5px 5px 10px black;
 }
@@ -141,8 +142,8 @@ section img{
   font-size: 1.5em;
   color: white;
   position:absolute;
-  top: 690px;
-  left: 450px;
+  top: 750px;
+  left: 34%;
   text-shadow: 5px 5px 10px black;
 }
 #codigos2{
@@ -151,8 +152,8 @@ section img{
   font-size: 1.5em;
   color: white;
   position:absolute;
-  top: 690px;
-  left: 750px;
+  top: 750px;
+  left: 56%;
   text-shadow: 5px 5px 10px black;
 }
 #codigo a{
@@ -192,7 +193,7 @@ text-align: justify;
   height: 45px;
   position:absolute;
   top:120px;
-  left:525px;
+  left:93.5%;
 }
 
 
@@ -204,45 +205,65 @@ text-align: justify;
   top:95px;
   left:-5px;
 }
-#Cont{
-  position:absolute;
-}
-#rot{
-  width: 100%;
-  height: 625px;
-}
+
 #galee{
   font-family: thinly;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   color: white;
   position:absolute;
-  top: 1270px;
+  top: 1320px;
   left: 48%;
   text-shadow: 5px 5px 10px black;
+}
+input{
+  border-radius: 15px;
 }
 #s1{
   font-family: thinly;
   text-align: center;
   font-size: 1.5em;
-  top: 1900px;
+  top: 1980px;
   left: 18%;
   color: white;
   position:absolute;
   text-shadow: 5px 5px 10px black;
 }
+footer h2{
+  position: absolute;
+  text-align: center;
+  font-family: thinly;
+  color: white;
+  font-size: 2em;
+  top: 2580px;
+  left: 45%;
+}
 #s2{
   font-family: thinly;
+  border-style: solid;
   text-align: center;
+  background-color: white;
+  padding-right: 50px;
   font-size: 1.5em;
   top: 2700px;
-  left: 45%;
-  color: white;
+  left: 34%;
+  color: black;
   position:absolute;
   text-shadow: 5px 5px 10px black;
 }
-a img{
-
+#imgcont1{
+  position: absolute;
+  border-radius: 20px;
+  top: 2900px;
+  left: 45%;
+  width: 50px;
+  height: 50px;
+}
+#imgcont2{
+  position: absolute;
+  border-radius: 20px;
+  top: 2900px;
+  left: 55%;
   width: 50px;
   height: 50px;
 }
