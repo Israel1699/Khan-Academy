@@ -1,7 +1,7 @@
 var Beaver = function(x, y) {
     this.x = x;
     this.y = y;
-    this.img = getImage("creatures/Hopper-Happy");
+    this.img = getImage("../images/Hopper-Happy");
     this.sticks = 0;
 };
 
@@ -14,12 +14,12 @@ Beaver.prototype.draw = function() {
 };
 
 Beaver.prototype.hop = function() {
-    this.img = getImage("creatures/Hopper-Jumping");
+    this.img = getImage("../images/Hopper-Jumping");
     this.y -= 5;
 };
 
 Beaver.prototype.fall = function() {
-    this.img = getImage("creatures/Hopper-Happy");
+    this.img = getImage("../images/Hopper-Happy");
     this.y += 5;
 };
 
@@ -63,7 +63,7 @@ draw = function() {
     rect(0, height*0.90, width, height*0.10);
 
     for (var i = 0; i < grassXs.length; i++) {
-        image(getImage("cute/GrassBlock"), grassXs[i], height*0.85, 20, 20);
+        image(getImage("../images/GrassBlock"), grassXs[i], height*0.85, 20, 20);
         grassXs[i] -= 1;
         if (grassXs[i] <= -20) {
             grassXs[i] = width;
@@ -91,5 +91,3 @@ draw = function() {
     }
     beaver.draw();
 };
-
-ml>
