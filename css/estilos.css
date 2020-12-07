@@ -43,22 +43,22 @@ body{
   background-color: gray;
 }
 .home{
-  background-image:-webkit-linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.2)),url("../images/6.jpg");
-  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.2)),url("../images/6.jpg");
-  background-size:cover;
-  background-attachment:fixed;
-  position:relative;
-}
-.home2{
   background-image:-webkit-linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.2)),url("../images/9.png");
   background-image:linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.2)),url("../images/9.png");
   background-size:cover;
   background-attachment:fixed;
   position:relative;
 }
+.home2{
+  background-image:-webkit-linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.2)),url("../images/5.jpg");
+  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.2)),url("../images/5.jpg");
+  background-size:cover;
+  background-attachment:fixed;
+  position:relative;
+}
 .home3{
-  background-image:-webkit-linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.616)),url("../images/5.jpg");
-  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.616)),url("../images/5.jpg");
+  background-image:-webkit-linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.616)),url("../images/6.jpg");
+  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(2, 2, 2, 0.616)),url("../images/6.jpg");
   background-size:cover;
   background-attachment:fixed;
   position:relative;
