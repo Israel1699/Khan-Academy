@@ -5,6 +5,68 @@
     <title>Prueba1</title>
     <meta name="viewport" content="width=device-width, user-scalable=1.0">
     <link rel="stylesheet" href="../css/all´s.css">
+
+    <style>
+
+              #h1{
+                  text-align: center;
+                  font-size: 2.5em;
+                  font-family: sans-serif;
+              }
+              #p{
+                  text-align: center;
+                  color: rgb(0, 34, 255);
+              }
+              #ul{
+                  color: red;
+                  margin-left: 30px;
+              }
+
+              #imgs{
+                  margin-left: 50px;
+                  height: 150px;
+                  border-radius: 20px;
+                  box-shadow: 0px 0px 20px 5px;
+              }
+              #fil1{
+                  position: absolute;
+                  height: 850px;
+                  width: 1000px;
+                  background-color: rgb(140, 255, 255);
+                  margin: 20px;
+                  border-radius: 20px;
+                  box-shadow: 0px 0px 20px 5px white;
+              }
+              #fil{
+                top: 50px;
+                left: 0px;
+                position: absolute;
+                width: 450px;
+                background-color: rgb(140, 255, 255);
+                margin: 20px;
+                border-radius: 20px;
+                box-shadow: 0px 0px 20px 5px;
+              }
+              #fil2{
+                  top: 50px;
+                  left: 500px;
+                  position: absolute;
+                  width: 450px;
+                  background-color: rgb(140, 255, 255);
+                  margin: 20px;
+                  border-radius: 20px;
+                  box-shadow: 0px 0px 20px 5px;
+              }
+              #alpes{
+                  text-align: center;
+                  color: purple;
+              }
+              .nieve{
+                  margin-left: 30px;
+                  color: blue;
+              }
+          </style>
+
   </head>
   <body class="home">
     <header>
@@ -12,21 +74,42 @@
           <img src="../images/logo2.jpg" alt="logotípo de la escuela de ciendias">
           <h1>Códigos de Khan-Academy</h1>
        <nav>
-        <ul id="menu">
-          <li><a href="../prueba.html">Inicio</a></li>
-          <li><a href="../html/Codigos.html">Codigos</a></li>
-          <li><a href="html/Galeria.html">Galería</a></li>
-        </ul>
+         <ul id="menu">
+           <li><a href="../prueba.html">Inicio</a></li>
+           <li><a href="../html/Codigos.html">Codigos</a></li>
+           <li><a href="../html/Galeria.html">Galería</a></li>
+         </ul>
       </nav>
     </header>
 <!-- Editar de aqí en adelante -->
     <h1 id="titulo">Proyecto: Pagina web de viajes</h1>
     <a href="../Codigos/Proyecto Invitacion a un evento.html"><input id="sig" type="button" name="Siguiente" value="Siguiente"></a>
     <a href="../Codigos/Proyecto Tarjeta de felicitación.html"><input id="ant" type="button" name="Anterior" value="Anterior"></a>
-    <p class="canvas">
-      <canvas id="mycanvas"></canvas>
-    </p>
+
+
+        <fieldset id="fil1">
+        <h1 id="h1">Viaja a....</h1>
+
+        <fieldset id="fil">
+               <h1 id="h1">Hawai</h1>
+                <p id="p"> Amarás ir a hawai porque sus playas son               geniales.</p>
+                <ul id="ul">
+                    <li id="li">Sus playas son unas de las mejores.<br><br> <img id="imgs" src="https://www.kasandbox.org/programming-images/landscapes/beach-in-hawaii.png" width="250"> <br><br> </li>
+                    <li id="li">Su comida es de la mejor. <br><br> <img id="imgs"  src="https://www.kasandbox.org/programming-images/food/fish_grilled-snapper.png" width="250"> <br><br></li>
+                    <li id="li">Su musica es incrible. <br><br> <img id="imgs"  src="https://www.kasandbox.org/programming-images/landscapes/beach-in-hawaii.png" width="250"></li>
+                </ul>
+        </fieldset>
+
+        <fieldset id="fil2">
+            <h1 id="h1">Los alpes</h1>
+            <p id="alpes"> Amarás ir a los alpes, sus hermosas montañas          te cautivarán.</p>
+                <ul class="nieve">
+                    <li id="li">Es genial para practicar el esquí.<br><br> <img id="imgs" src="https://www.kasandbox.org/programming-images/seasonal/snowy-slope-with-trees.png" width="250"> <br><br></li>
+                    <li id="li">La vista de las montañas es increible. <br><br> <img id="imgs" src="https://www.kasandbox.org/programming-images/landscapes/mountain_matterhorn.png" width="250"> <br><br> </li>
+                    <li id="li">Su clima es perfecto para las fogatas. <br><br> <img id="imgs" src="https://www.kasandbox.org/programming-images/landscapes/mountains-sunset.png" width="250"></li>
+                </ul>
+        </fieldset>
+               </fieldset>
+
   </body>
-  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
-  <script src="../js/castor.js" >lol</script>
 </html>

@@ -5,6 +5,45 @@
     <title>Prueba1</title>
     <meta name="viewport" content="width=device-width, user-scalable=1.0">
     <link rel="stylesheet" href="../css/all´s.css">
+    <style media="screen">
+
+        #fil{
+          float: left;
+          margin-left: 350px;
+          border-radius: 20px;
+          height: 50%;
+          width: 50%;
+          background-color: rgb(89, 166, 255);
+          box-shadow: 0px 0px 15px 5px white;
+            }
+        #h1 {
+          text-align: center;
+          color:rgb(255, 255, 255);
+            }
+        #h2 {
+          text-align: center;
+          color:rgb(255, 255, 255);
+            }
+        #div{
+          margin: 20px;
+          border-radius: 20px;
+          border: double;
+          padding:10px;
+          font-family: arial;
+          font-weight:bold;
+          background-color: rgb(163, 212, 255);
+            }
+        #ul {
+          padding:25px;
+          margin-top:10px;
+            }
+        #img1{
+          border:double;
+          position:relative;
+          float:right;
+          margin-right:31px;
+              }
+    </style>
   </head>
   <body class="home">
     <header>
@@ -12,21 +51,30 @@
           <img src="../images/logo2.jpg" alt="logotípo de la escuela de ciendias">
           <h1>Códigos de Khan-Academy</h1>
        <nav>
-        <ul id="menu">
-          <li><a href="../prueba.html">Inicio</a></li>
-          <li><a href="../html/Codigos.html">Codigos</a></li>
-          <li><a href="html/Galeria.html">Galería</a></li>
-        </ul>
+         <ul id="menu">
+           <li><a href="../prueba.html">Inicio</a></li>
+           <li><a href="../html/Codigos.html">Codigos</a></li>
+           <li><a href="../html/Galeria.html">Galería</a></li>
+         </ul>
       </nav>
     </header>
 <!-- Editar de aqí en adelante -->
     <h1 id="titulo">Proyecto: Invitación a un evento</h1>
     <a href="../Codigos/Proyecto Castor saltarin extremo.html"><input id="sig" type="button" name="Siguiente" value="Siguiente"></a>
     <a href="../Codigos/Proyecto Pagina web de viajes.html"><input id="ant" type="button" name="Anterior" value="Anterior"></a>
-    <p class="canvas">
-      <canvas id="mycanvas"></canvas>
-    </p>
-  </body>
-  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
-  <script src="../js/castor.js" >lol</script>
+
+        <fieldset id="fil">
+         <h1 id="h1">Estas cordialmente invitado!</h1>
+            <h2 id="h2">A mi fiesta de cumpleaños!!</h2>
+            <div id="div"><p id="p">Venir con:</p>
+            <img id="img1" src="https://www.kasandbox.org/programming-images/seasonal/fireworks-in-sky.png" alt="friends" width="210">
+            <ul id="ul">
+                <li>Regalos.</li>
+                <li>Venir con hambre.</li>
+                <li>Invitar a tus amigos.</li>
+                <li>Venir difrazado.</li>
+                <li>Sugerir peliculas.</li>
+                <li>Traer bendas.</li>
+            </ul></div>
+  </fieldset>
 </html>
