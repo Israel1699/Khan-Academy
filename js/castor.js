@@ -1,307 +1,153 @@
-var bee;
-var grass;
-var spider;
-var currentScene;
-var separation = 100;
-var large = 200;
-var state;
-var range = 4;
-
-const init = function(pro){
-    with (pro) {
-        size(400,400);
-        fill(220, 0, 55);
-        frameRate(30);
-        background(255,255,255);
+document.addEventListener('keydown',function(evento){
+    if(evento.keyCode == 32){
+      console.log("salta");
+      if(nivel.muerto == false){
+      saltar();
+      }
+      else{
+        nivel.velocidad = 6;
+        nube.velocidad = 1;
+        bigmoom.x = ancho + 100;
+        nube.x = ancho + 100;
+        nivel.puntuacion = 0;
+        nivel.muerto = false;
+      }
     }
-};
-
-function drawAfter(pro, callback){
-    bee = pro.loadImage("./imgages/bee.png");
-    grass = pro.loadImage("./imgages/grass.png");
-    spider = pro.loadImage("./imgages/spider.png");
-    setTimeout(() => {
-        callback(bee, 200, 100, 40, 40)
-        callback(spider, 220, 70, 40, 40)
-    }, 500);
+});
+var imgChop, imgAlgodon,imgtope,imgSuelo;
+function cargaImagenes(){
+  imgChop = new Image();
+  imgAlgodon = new Image();
+  imgtope = new Image();
+  imgSuelo = new Image();
+  imgChop.src ='images/chooper.png';
+  imgAlgodon.src='images/684.png';
+  imgtope.src='images/plab.png';
+  imgSuelo.src='images/suelo5.png';
 }
 
-var sketchProc = function(processingInstance) {
+var ancho = 700;
+var alto = 300;
+var canvas,ctx;
 
-    with (processingInstance) {
-        init(processingInstance)
-        drawAfter(processingInstance, image);
-        /**
-         * Bloque de la clase Button, constructor y metodos
-         *
-         */
-        class Button{
-            constructor(config){
-                this.x = config.x || 0;
-                this.y = config.y || 0;
-                this.width = config.width || 80;
-                this.height = config.height || 50;
-                this.label = config.label || "Click";
-                this.color = config.color || color(207, 85, 85);
-                this.onClick = config.onClick || function() {};
-            };
-            //draw the button
-            draw (str) {
-                if(str)
-                    this.label=str;
 
-                if (this.isMouseInside() && mousePressed) {
-                    fill(255, 255, 255);
-                }
-                else {
-                    fill(this.color);
-                }
-                rectMode(CENTER);
-                rect(this.x, this.y, this.width, this.height, 5);
-                fill(0, 0, 0);
-                textSize(19);
-                textAlign(CENTER, CENTER);
-                text(this.label, this.x, this.y);
-            };
-            //check if mouse cursor is inside the button
-            isMouseInside () {
-                return mouseX > this.x-this.width/2 &&
-                       mouseX < (this.x + this.width/2) &&
-                       mouseY > this.y - this.height/2 &&
-                       mouseY < (this.y + this.height/2);
-            };
-            //handle mouse clicks for the button
-            handleMouseClick () {
-                if (this.isMouseInside()) {
-                    this.onClick();
-                }
-            };
-        };
-        /**
-         * Bloque de la clase Beaver, es el personaje de l juego
-         *
-        */
-        class Beaver{
-            constructor(x, y){
-                this.x = x;
-                this.y = y;
-                this.img = bee;
-                this.sticks = 0;
-                this.level = 1;
-            }
-            draw() {
-                fill(255, 0, 0);
-                this.y = constrain(this.y, 0, height-100);
-                image(this.img, this.x, this.y, 40, 40);
-            };
-            hop() {
-                //this.img = getImage("creatures/Hopper-Jumping");
-                this.y -= 5;
-            };
-            fall() {
-                //this.img = getImage("creatures/Hopper-Happy");
-                this.y += 5;
-            };
-            checkForStickGrab(stick) {
-                if ((stick.x >= this.x && stick.x <= (this.x + 40)) &&
-                    (stick.y <= this.y && this.y  <= (stick.y + large))) {
-                    stick.x = -400;
-                    this.sticks+=10;
-                }
-            };
-            checkForSpiderTouch(spi) {
-                if ((spi.x >= this.x && spi.x <= (this.x + 40)) &&
-                    (spi.y >= this.y && spi.y <= (this.y + 40))) {
-                    //stick.x = -400;
-                    this.sticks-=1;
-                }
-            };
+function inicializa(){
+  canvas = document.getElementById('canvas');
+  ctx = canvas.getContext('2d');
+  cargaImagenes();
+}
 
-        }
-        class Spider{
-            constructor(x, y){
-                this.x = x;
-                this.y = y;
-                this.img = spider;
-                this.sticks = 0;
-                this.level = 1;
-            }
-            up() {
-                this.y -= 10;
-                this.x -= 3;
-                if(this.x<0)
-                    this.x=400;
-            };
-            down() {
-                this.y += 10;
-                this.x -= 3;
-                if(this.x<0)
-                    this.x=400;
-            };
-            draw() {
-                fill(255, 0, 0);
-                stroke(0,0,0);
-                this.y = constrain(this.y, 0, height-100);
-                image(this.img, this.x, this.y, 40, 40);
-                line(this.x+20, 0, this.x+20, this.y);
-            };
-        }
-        /**
-         * Bloque de la clase Stick, el elemento que da puntos */
-        class Stick{
-            constructor(x, y) {
-                this.x = x;
-                this.y = y;
-            };
-            draw() {
-                fill(89, 71, 0);
-                //rectMode(CENTER);
-                //rect(this.x, this.y, 5, 40);
-                rect(this.x, 0, 5, this.y);
-                rect(this.x, this.y+large, 5, height);
-            };
-        };
-        /**
-         * Bloque de declaracion de variables
-         */
-        var beaver = new Beaver(200, 300);
-        var spidy = new Spider(400,200);
-        var sticks = [];
-        for (var i = 0; i < 5; i++) {
-            sticks.push(new Stick(i * separation + 300, random(20, 260)));
-        }
+ function borraCanvas(){
 
-        var grassXs = [];
-        for (var i = 0; i < 25; i++) {
-            grassXs.push(i*20);
-        }
-        var btn1 = new Button({
-            x: 340,
-            y: 340,
-            width: 100,
-            height: 30,
-            color: color(250,100,250),
-            label:"Comenzar",
-            onClick: function() {
-                //if(currentScene === 1)
-                currentScene = 2;
-            }
-        });
+ canvas.width = ancho;
+ canvas.height = alto;
+ }
+ var suelo = 200;
+ var movchopp ={
+   y: 200,vy:0,gravedad:2,salto:28,vymax:9,saltando:false };
+var bigmoom={x:ancho+100 , y:suelo-30}
+var nivel = {velocidad:6,puntuacion:0,muerto:false};
+var nube = { x:400, y:suelo-200,velocidad:1}
+var suelog= {x:0,y:suelo-55};
+ function dibujaChopper(){
+      ctx.drawImage(imgChop,0,0,500,500,100,movchopp.y,80,80);
+ }
+ function dibujaBigMonm(){
+     ctx.drawImage(imgtope,0,0,700,700,bigmoom.x,bigmoom.y,110,135);
 
-        /**
-         * Bloque de escenas
-         */
-        var drawScene1 = function() {
-            currentScene = 1;
-            background(235, 247, 255);
-            fill(0, 85, 255);
-            textSize(20);
-            text("The bee game, do you want try to save her?", 10, height/2);
-        };
-
-        var drawScene3 = function() {
-            currentScene = 3;
-            background(227, 254, 255);
-            fill(130, 79, 43);
-            rectMode(CORNER);
-            rect(0, height*0.90, width, height*0.10);
-
-            for (var i = 0; i < grassXs.length; i++) {
-                image(grass, i*20, height*0.85, 20, 20);
-
-            }
-            if(state){
-                text("YOU WIN!!!!", 100, 200);
-                btn1.draw("Next Level");
-                large -= 20;
-                separation -= 10;
-                range*=2;
-                beaver.level++;
-            }
-            else{
-                text("YOU lose!!!!", 100, 200);
-                btn1.draw("Otra vez");
-            }
-            beaver.sticks = 0;
-            sticks = [];
-            for (var i = 0; i < range; i++) {
-                sticks.push(new Stick(i * separation + 300, random(20, 260)));
-            }
-
-        };
-
-        draw = function() {
-
-            if(currentScene === 2 )
-            {
-                // static
-                background(227, 254, 255);
-                fill(130, 79, 43);
-                rectMode(CORNER);
-                rect(0, height*0.90, width, height*0.10);
-                //dibujo de pasto
-                for (var i = 0; i < grassXs.length; i++) {
-                    image(grass, grassXs[i], height*0.85, 20, 20);
-                    grassXs[i] -= 1;
-                    if (grassXs[i] <= -20) {
-                        grassXs[i] = width;
-                    }
-                }
-                //dibujo de sticks
-                for (var i = 0; i < sticks.length; i++) {
-                    sticks[i].draw();
-                    beaver.checkForStickGrab(sticks[i]);
-                    sticks[i].x -= 1;
-                }
-                beaver.checkForSpiderTouch(spidy);
-                //estadisiticas
-                textSize(18);
-                text("Score: " + beaver.sticks, 40, 30);
-                text("Level: " + beaver.level, 40, 50);
-                //evaluacion al final del juego
-                if (beaver.sticks/sticks.length/10 >= 0.95) {
-                    textSize(36);
-                    text("YOU WIN!!!!", 100, 200);
-                    state = true;
-                    drawScene3();
-                }
-                else if(sticks[sticks.length-1].x<0)//checar aqui porque se pueden comer la ultima creo que si por  que si se la come es -400
-                {
-                    textSize(36);
-                    text("YOU lose!!!!", 100, 200);
-                    state = false;
-
-                    drawScene3();
-                }
-                //control de la abeja
-                if (keyPressed && keyCode === 0) {
-                    beaver.hop();
-                } else {
-                    beaver.fall();
-                }
-                //control de la araña
-                if(frameCount%3===0){
-                    if (round(random(0,1))) {
-                        spidy.up();
-                    } else {
-                        spidy.down();
-                    }
-                }
-                beaver.draw();
-                spidy.draw();
-            }
-        };
-
-        mouseClicked = function() {
-            btn1.handleMouseClick();
-            //btn2.handleMouseClick();
-        };
-
-        drawScene1();
-        btn1.draw();
-
+ }
+ function dibujaNube(){
+  ctx.drawImage(imgAlgodon,0,0,500,500,nube.x,nube.y,120,105);
+ }
+ function dibujasuelo(){
+  ctx.drawImage(imgSuelo,suelog.x,0,700,500,0,suelog.y,700,200);
+ }
+ function logicaSuelo(){
+    if(suelog.x > 700){
+      suelog.x = 0;
     }
-};
+    else{
+      suelog.x += nivel.velocidad;
+    }
+ }
+ function logicaBigMom(){
+  if(bigmoom.x < -100){
+     bigmoom.x = ancho + 100;
+     nivel.puntuacion++;
+  }
+  else{
+    bigmoom.x -= nivel.velocidad;
+  }
+ }
+ function logicaNube(){
+  if(nube.x < -100){
+     nube.x = ancho + 100;
+  }
+  else{
+    nube.x -= nube.velocidad;
+  }
+ }
+ function saltar(){
+   movchopp.saltando = true;
+   movchopp.vy = movchopp.salto;
+ }
+ function gravedad(){
+    if(movchopp.saltando == true){
+      if (movchopp.y - movchopp.vy - movchopp.gravedad > suelo) {
+        movchopp.saltando = false;
+        movchopp.vy = 0;
+        movchopp.y = suelo;
+
+      }
+      else{
+      movchopp.vy -= movchopp.gravedad;
+      movchopp.y -= movchopp.vy;
+    }
+  }
+ }
+ function colision(){
+   //ctx.drawImage(imgChop,0,0,500,500,100,movchopp.y,80,80);
+   if(bigmoom.x >= 100 && bigmoom.x <= 150){
+       if(movchopp.y >= suelo-55){
+          nivel.muerto = true;
+          nivel.velocidad = 0;
+          nube.velocidad =0;
+       }
+   }
+
+
+ }
+ function puntuacion(){
+   ctx.font = "30px impact";
+   ctx.fillStyle = '#555555';
+   ctx.fillText(`${nivel.puntuacion}`,600,50);
+   ctx.fillText('Score :',500,50);
+   if (nivel.muerto == true) {
+     ctx.font= "30px impact"
+     ctx.fillText('GAME OVER SAIRA',240,150);
+   }
+ }
+var FPS = 50;
+setInterval(function(){
+ principal();
+},1000/FPS);
+
+function principal(){
+    console.log("principal");
+    borraCanvas();
+    gravedad();
+    colision();
+    logicaSuelo();
+    logicaBigMom();
+    logicaNube();
+    dibujasuelo();
+    dibujaNube();
+    dibujaBigMonm();
+    dibujaChopper();
+    puntuacion();
+
+}
+
 
    // Get the canvas that Processing-js will use
    var canvas = document.getElementById("mycanvas");

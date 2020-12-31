@@ -146,3 +146,12 @@ input:hover{
   padding: 10px;
   z-index: 400px;
 }
+
+#canvas{
+
+    width:"700";
+    height:"300";
+    border:2px solid #000000;
+    background-color: aqua;
+    position: center;
+}
