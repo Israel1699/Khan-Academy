@@ -1,0 +1,287 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+header{
+  height: 55px;
+  width: 100%;
+  padding: 8px 0px 5px 5px;
+  left: -2px;
+  margin-top: -179px;
+  border-radius: 20px;
+  background-image:-webkit-linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(0.5, 0.5, 0.5, 0)),url("../images/10.jpg");
+  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.836), rgba(0.5, 0.5, 0.5, 0)),url("../images/10.jpg");
+  background-attachment:fixed;
+  box-shadow: 0px 0px 10px white;
+  position: fixed;
+  overflow: hidden;
+  z-index: 500;
+}
+
+ header img{
+   border-radius: 15px;
+   margin: 5px;
+   width: 45px;
+   height: 45px;
+   float: left;
+ }
+
+header h1{
+  color: white;
+  font-family: thinly;
+  float: left;
+  padding: 7px 0px 5px 10px;
+  font-size: 2.1em;
+}
+
+header nav{
+  float: right;
+  padding: 7px 10px 5px 0px;
+}
+nav ul li{
+  display: inline;
+}
+
+#menu a{
+  margin-right: 10px;
+  text-decoration: none;
+  font-family: thinly;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+}
+
+#menu a:hover{
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  transition: .6s;
+}
+
+.home3{
+  background-image:-webkit-linear-gradient(to right,rgba(2, 2, 2, 0.616),z rgba(0, 0, 0, 0.3)),url("../images/17.jpg");
+  background-image:linear-gradient(to right,rgba(2, 2, 2, 0.616), rgba(0, 0, 0, 0.3)),url("../images/17.jpg");
+  background-size:cover;
+  background-attachment:fixed;
+  position:relative;
+}
+
+
+/* Esta parte pertenece a la seccion de "Galeria" */
+
+#galee{
+  font-family: thinly;
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  position:absolute;
+  top: -95px;
+  left: 610px;
+  text-shadow: 5px 5px 10px black;
+}
+.contenedor-izq{
+width: 550px;
+height: 300px;
+background-color: #57A4B5;
+position: fixed;
+top: 250px;
+left: -570px;
+box-shadow: 5px 5px 15px black;
+border: 1px solid #BDBDBD;
+border-radius: 5px;
+z-index: 400;
+padding-left: 15px;
+}
+.contenedor-izq:hover{
+  transition: 0.8s;
+  transform: translate(570px);
+}
+
+.contenedor-mensaje{
+  width: 90%;
+  height: 70%,
+}
+
+.mensaje-contenedor{
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.siguiente{
+  width: 85px;
+  height: 45px;
+  position:absolute;
+  top:120px;
+  left: 95%;
+}
+
+
+#a{
+  margin-top: 180px;
+  height: 540px;
+  width: 620px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 15px 5px white;
+  border-radius: 10px;
+}
+#a img{
+  margin-left: 50px;
+  width: 80%;
+  height: 90%;
+}
+#a h3{
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.a{
+  border-radius: 10px;
+  margin: 0px 5px 10px 10px;
+  height: 450px;
+  width: 600px;
+}
+
+#b{
+  float: right;
+  margin-right: 20px;
+  height: 540px;
+  margin-top: -541px;
+  width: 620px;
+  box-shadow: 0px 0px 15px 5px white;
+  border-radius: 10px;
+}
+#b img{
+  margin-left: 50px;
+  width: 80%;
+  height: 90%;
+}
+#b h3{
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.b{
+  border-radius: 10px;
+  margin: 0px 5px 10px 10px;
+  height: 450px;
+  width: 600px;
+}
+
+#c{
+  margin-top: 50px;
+  height: 540px;
+  width: 620px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 15px 5px white;
+  border-radius: 10px;
+}
+
+#c img{
+  margin-left: 50px;
+  width: 80%;
+  height: 90%;
+}
+#c h3{
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.c{
+  border-radius: 10px;
+  margin: 0px 5px 10px 34px;
+  height: 450px;
+  width: 550px;
+}
+
+
+#d{
+  float: right;
+  margin-right: 20px;
+  height: 540px;
+  margin-top: -539px;
+  width: 620px;
+  box-shadow: 0px 0px 15px 5px white;
+  border-radius: 10px;
+}
+
+#d img{
+  margin-left: 50px;
+  width: 80%;
+  height: 90%;
+}
+
+#d h3{
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.d{
+  border-radius: 10px;
+  margin: 0px 5px 10px 10px;
+  height: 450px;
+  width: 600px;
+}
+
+
+#e{
+  margin-top: 50px;
+  height: 540px;
+  width: 620px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 15px 5px white;
+  border-radius: 10px;
+}
+
+#e img{
+  margin-left: 50px;
+  width: 80%;
+  height: 90%;
+}
+
+#e h3{
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.e{
+  border-radius: 10px;
+  margin: 0px 5px 10px 34px;
+  height: 450px;
+  width: 550px;
+}
+
+#f{
+  float: right;
+  margin-right: 20px;
+  height: 540px;
+  margin-top: -539px;
+  width: 620px;
+  box-shadow: 0px 0px 15px 5px white;
+  border-radius: 10px;
+}
+
+#f img{
+  margin-left: 50px;
+  width: 80%;
+  height: 90%;
+}
+
+#f h3{
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.f{
+  border-radius: 10px;
+  margin: 0px 5px 10px 10px;
+  height: 450px;
+  width: 600px;
+}
+
+/* Termina la seccion de "Galeria" */

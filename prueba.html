@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Prueba1</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0,
-    minumum-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+    minimum-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="home">
 
-<header>
+<div class="contenedorp">
+
+ <header>
       <img src="images/logo.jpg" alt="logotípo de la uabjo" >
       <img src="images/logo2.jpg" alt="logotípo de la escuela de ciendias">
       <h1>Códigos de Khan-Academy</h1>
@@ -17,54 +19,41 @@
     <ul id="menu">
       <li><a href="html/Codigos.html">Códigos</a></li>
       <li><a href="html/Galeria.html">Galería</a></li>
-      <li><a href="#esc">Escríbeme</a></li>
+      <li><a href="#escc">Escríbeme</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
-  <div id="icon-menu">
 
-  </div>
-</header>
-
-  <section id="portada">
-    <div>
-    <article>
+ </header>
+ <div class="portada">
+   <section>
       <h2 id="nombre">Pedro Israel Garcia Flores</h2>
       <h3 id="titulo">"Siempre parece imposible, hasta que lo haces"</h3>
       <p id="mensaje">Ya no eres un niño, lo siento, ese tiempo ya pasó, ahora eres adulto y puedes hacer
            más y mejores cosas. Ten conciencia de ello y ten cuidado con lo que haces, pues ahora deberás ser responsable de tus actos.</p>
+    </section>
+   <a href="#contacto"><img id="bajar" src="images/down.png" alt=""></a>
+  </div>
 
-    </article>
-  </section>
-    <article >
-      <a href="#contacto"><img id="bajar" src="images/down.png" alt=""></a>
-    </article>
-    </div>
-
-  <div>
-   <section>
-    <article>
-      <div id="esc">
-
-      </div>
-
+  <div id="escc">
+  </div>
+  <div id="ess">
+    <div class="justify-content-center align-items-center">
       <form action="https://mail.google.com/mail/u/0/#inbox" method="post">
-        <fieldset id="s1">
+        <fieldset id="esc">
           <h2>Si tienes dudas o cometarios, no dudes en escribirme.</h2><br>
           <textarea name="name" rows="8" cols="80"></textarea><br>
           <input type="reset" name="cancelar" value="Cancelar">
           <input type="submit" name="enviar" value="Enviar">
         </fieldset>
       </form>
-    </article>
-    </section>
+    </div>
   </div>
-  <!-- -->
 </body>
-<footer class="in-felx" class="home-footer">
-  <div >
+
+<div id="foot">
+ <footer class="in-felx" class="home-footer">
   <section>
-    <article>
       <h2 id="contacto">Contactame</h2>
       <fieldset id="s2">
         <ul>
@@ -74,8 +63,9 @@
       </fieldset>
         <a href="https://www.facebook.com/jupri112/"><img id="imgcont1" src="images/face.png" alt=""></a>
         <a href="https://www.instagram.com/nan_e_isra/?hl=es-la"><img id="imgcont2" src="images/instagram.png" alt=""></a>
-    </article>
   </section>
+ </footer>
 </div>
-</footer>
+
+</div>
 </html>
